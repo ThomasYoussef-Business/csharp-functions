@@ -79,8 +79,31 @@
             Console.Write("]\n");
         }
 
+        /// <summary>
+        /// Ritorna una copia dell'array con ogni elemento elevato al quadrato
+        /// </summary>
+        /// <param name="arrayDiNumeri">L'array da passare</param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException">Dato quando l'array passato è vuoto</exception>
         public static int[] ElevaArrayAlQuadrato(this int[] arrayDiNumeri) {
-            throw new NotImplementedException();
+
+
+            if (arrayDiNumeri.Length == 0) {
+                throw new ArgumentException("L'array passato è vuoto");
+            }
+
+            int[] nuovoArray = new int[arrayDiNumeri.Length];
+            for (int i = 0; i < arrayDiNumeri.Length; i++) {
+                nuovoArray[i] = Integers.Quadrato(arrayDiNumeri[i]);
+            }
+
+            return nuovoArray;
+
         }
+
+    }
+
+    public static class Integers {
+        public static int Quadrato(int input) => input * input;
     }
 }
