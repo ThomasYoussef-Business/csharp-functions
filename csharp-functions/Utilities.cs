@@ -7,8 +7,7 @@
         /// <returns></returns>
         public static string? InputConMessaggio(string messaggio) {
             Console.WriteLine(messaggio);
-            string? input = Console.ReadLine();
-            return input;
+            return Console.ReadLine();
         }
         /// <summary>
         /// Simile a InputConMessaggio, però chiede anche una conferma all'utente
@@ -47,6 +46,11 @@
         /// <param name="messaggio"></param>
         /// <returns></returns>
         public static int InputInteger(string messaggio) {
+
+            if (messaggio.Trim() == "") {
+                throw new ArgumentException("Il messaggio non può essere nullo");
+            }
+
             int input;
             bool success = int.TryParse(InputConMessaggio(messaggio), out input);
             while (!success) {
