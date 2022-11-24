@@ -1,7 +1,7 @@
 ﻿/*
  * Scrivete nel vostro programma principale Program.cs le seguenti funzioni di base:
  * 
- *  [] void StampaArrayInteri(int[] array): che preso un array di numeri interi, stampa a video il contenuto
+ *  [x] void StampaArrayInteri(int[] array): che preso un array di numeri interi, stampa a video il contenuto
  *  dell’array in questa forma “[elemento 1, elemento 2, elemento 3, ...]”. Potete prendere quella fatta in classe questa mattina
  *  
  *  [] int Quadrato(int numero): che vi restituisca il quadrato del numero passato come parametro.
@@ -27,3 +27,13 @@
  *  
  *  [] Stampare la somma di tutti i numeri elevati al quadrati
  */
+
+using Utilities;
+
+int[] arrayNumeri = { 2, 6, 7, 5, 3, 9 };
+
+arrayNumeri.StampaArrayInteri();
+arrayNumeri.ElevaArrayAlQuadrato().StampaArrayInteri();
+arrayNumeri.StampaArrayInteri();
+arrayNumeri.Somma().Stampa();
+arrayNumeri.ElevaArrayAlQuadrato().Somma().Stampa();
