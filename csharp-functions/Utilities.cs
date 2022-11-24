@@ -101,6 +101,24 @@
 
         }
 
+        /// <summary>
+        /// Ritorna la somma di ogni numero nell'array
+        /// </summary>
+        /// <param name="arrayDiNumeri"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
+        public static int SommaElementiArray(this int[] arrayDiNumeri) {
+            if (arrayDiNumeri.Length == 0) {
+                throw new ArgumentException("L'array provveduto è vuoto");
+            }
+
+            int somma = 0;
+            foreach (int i in arrayDiNumeri) {
+                somma += i;
+            }
+
+            return somma;
+        }
     }
 
     public static class Integers {
