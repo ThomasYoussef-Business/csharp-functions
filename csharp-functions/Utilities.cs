@@ -40,6 +40,22 @@
             } while (!(conferma == "y" || conferma == "n"));
             return conferma == "y";
         }
+
+        /// <summary>
+        /// Assicura che l'utente inserisca un numero, richiedendo il messaggio fino a quando l'input non è valido
+        /// </summary>
+        /// <param name="messaggio"></param>
+        /// <returns></returns>
+        public static int InputInteger(string messaggio) {
+            int input;
+            bool success = int.TryParse(InputConMessaggio(messaggio), out input);
+            while (!success) {
+                Console.WriteLine("Input non valido!");
+                success = int.TryParse(InputConMessaggio(messaggio), out input);
+            }
+
+            return input;
+        }
     }
 
     public static class ArrayExtensions {

@@ -30,12 +30,15 @@
 
 using Utilities;
 
-int[] arrayNumeri = { 2, 6, 7, 5, 3, 9 };
+int lunghezzaArray = Input.InputInteger("Inserisci quanti numeri vuoi mettere: ");
+int[] arrayNumeri = new int[lunghezzaArray];
+
+for (int i = 0; i < lunghezzaArray; i++) {
+    arrayNumeri[i] = Input.InputInteger($"Inserisci il {i + 1}° numero: ");
+}
 
 arrayNumeri.StampaArrayInteri();
 arrayNumeri.ElevaArrayAlQuadrato().StampaArrayInteri();
 arrayNumeri.StampaArrayInteri();
 Console.WriteLine(arrayNumeri.SommaElementiArray());
-Console.WriteLine(arrayNumeri
-    .ElevaArrayAlQuadrato()
-    .SommaElementiArray());
+Console.WriteLine(arrayNumeri.ElevaArrayAlQuadrato().SommaElementiArray());
