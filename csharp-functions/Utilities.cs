@@ -101,7 +101,6 @@
 
         }
 
-        /// <summary>
     }
 
     public static class Integers {
