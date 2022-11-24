@@ -35,5 +35,7 @@ int[] arrayNumeri = { 2, 6, 7, 5, 3, 9 };
 arrayNumeri.StampaArrayInteri();
 arrayNumeri.ElevaArrayAlQuadrato().StampaArrayInteri();
 arrayNumeri.StampaArrayInteri();
-arrayNumeri.SommaElementiArray().StampaArrayInteri();
-arrayNumeri.ElevaArrayAlQuadrato().SommaElementiArray().StampaArrayInteri();
+Console.WriteLine(arrayNumeri.SommaElementiArray());
+Console.WriteLine(arrayNumeri
+    .ElevaArrayAlQuadrato()
+    .SommaElementiArray());
